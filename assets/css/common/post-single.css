@@ -92,6 +92,8 @@
 
 .post-content del {
     text-decoration: line-through;
+    /* text-decoration: none; 
+    background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0 50%/1px 1px repeat-x;*/
 }
 
 .post-content dl,
@@ -220,6 +222,7 @@
 .post-content blockquote {
     margin: 20px 0;
     padding: 0 14px;
+    color: var(--secondary);
     border-inline-start: 3px solid var(--primary);
 }
 
@@ -414,4 +417,16 @@ h1>a>svg {
 img.in-text {
     display: inline;
     margin: auto;
+}
+
+.footnote-ref  {
+    margin-left: 3px;
+}
+
+.footnote-ref::before {
+    content: "[";
+}
+
+.footnote-ref::after {
+    content: "]";
 }

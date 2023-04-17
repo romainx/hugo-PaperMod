@@ -1,8 +1,12 @@
 {{- define "main" }}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- if site.Params.ShowAllPagesInArchive }}
+  {{- $pages = site.RegularPages }}
+{{- end }}
 
 <header class="page-header">
   <h1>
-    {{ .Title }}
+    {{ .Title }}<sup class="archive-count">&nbsp;&nbsp;{{ len $pages }}</sup>
     {{- if (.Param "ShowRssButtonInSectionTermList") }}
     {{- $rss := (.OutputFormats.Get "rss") }}
     {{- if (eq .Kind `page`) }}
@@ -26,12 +30,6 @@
   </div>
   {{- end }}
 </header>
-
-{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-
-{{- if site.Params.ShowAllPagesInArchive }}
-{{- $pages = site.RegularPages }}
-{{- end }}
 
 {{- range $pages.GroupByPublishDate "2006" }}
 {{- if ne .Key "0001" }}

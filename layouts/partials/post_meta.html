@@ -1,7 +1,7 @@
 {{- $scratch := newScratch }}
 
 {{- if not .Date.IsZero -}}
-{{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_long" site.Params.DateFormat)))) }}
+{{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_medium" site.Params.DateFormat)))) }}
 {{- end }}
 
 {{- if (.Param "ShowReadingTime") -}}
@@ -16,6 +16,10 @@
 {{- with (partial "author.html" .) }}
 {{- $scratch.Add "meta" (slice (printf "<span>%s</span>" .)) }}
 {{- end }}
+{{- end }}
+
+{{- with (partial "categories.html" .) }}
+{{- $scratch.Add "meta" (slice .) }}
 {{- end }}
 
 {{- with ($scratch.Get "meta") }}

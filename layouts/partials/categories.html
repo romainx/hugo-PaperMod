@@ -1,0 +1,9 @@
+{{ range (.GetTerms "categories") }}
+{{/* TODO replace with format print */}}
+<span class="w3-tag"><a href="{{ .RelPermalink }}" {{ with .Params.style }}style="background-color: {{ .background }}; color: {{ .color }};display:inline-block;padding-left:8px;padding-right:8px;text-align:center;border-radius:8px"{{ end }}>
+    {{ .LinkTitle }}
+</a></span>
+{{ end }}
+{{- if in .Params.tags "Coup de coeur" -}}
+    <span class="heart">&nbsp;&hearts;</span>
+{{- end }}
