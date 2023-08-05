@@ -22,6 +22,12 @@
 {{- $scratch.Add "meta" (slice .) }}
 {{- end }}
 
+{{- if not (.Param "hideAuthor") -}}
+{{- with (partial "author.html" .) }}
+{{- $scratch.Add "meta" (slice .) }}
+{{- end }}
+{{- end }}
+
 {{- with ($scratch.Get "meta") }}
 {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
 {{- end -}}
