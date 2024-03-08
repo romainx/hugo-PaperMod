@@ -409,6 +409,10 @@ img.in-text {
     margin: auto;
 }
 
+.footnotes {
+    font-size: medium;
+}
+
 .footnote-ref  {
     margin-left: 3px;
 }
