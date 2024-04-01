@@ -20,6 +20,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 2px;
 }
 
 .post-meta .i18n_list li {
