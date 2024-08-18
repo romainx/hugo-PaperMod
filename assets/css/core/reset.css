@@ -25,10 +25,11 @@ h6 {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
     font-size: 18px;
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 325;
     word-break: break-word;
     background: var(--theme);
 }
@@ -47,6 +48,15 @@ table {
     display: block;
 }
 
+header,
+footer,
+ul.terms-tags,
+div.archive-entry,
+article.first-entry.home-info
+{
+    font-family: 'Fira Sans', sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -54,7 +64,7 @@ h4,
 h5,
 h6 {
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 h1,
@@ -76,8 +86,9 @@ a {
     text-decoration: none;
 }
 
-b {
-    font-weight: 700;
+b, strong {
+    font-weight: 500;
+
   }
 
 body,
