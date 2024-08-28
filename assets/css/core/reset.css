@@ -29,7 +29,7 @@ body {
     font-optical-sizing: auto;
     font-size: 18px;
     line-height: 1.6;
-    font-weight: 350;
+    font-weight: 375;
     word-break: break-word;
     background: var(--theme);
 }
@@ -89,7 +89,7 @@ a {
 }
 
 b, strong {
-    font-weight: 600;
+    font-weight: 650;
 
   }
 
