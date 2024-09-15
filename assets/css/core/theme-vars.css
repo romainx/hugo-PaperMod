@@ -20,8 +20,8 @@
 }
 
 .dark {
-    --theme: rgb(29, 30, 32);
-    --entry: rgb(46, 46, 51);
+    --theme: #1e2731;
+    --entry: #2e3844;
     --primary: rgb(218, 218, 219);
     --secondary: rgb(155, 156, 157);
     --tertiary: rgb(65, 66, 68);
