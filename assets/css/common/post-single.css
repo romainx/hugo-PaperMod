@@ -228,8 +228,8 @@
     text-align: center;
 }
 
-.post-content hr:after{
-    content: "§";
+.post-content > hr::after{
+    content: "\2042";
     display: inline-block;
     position: relative;
     top: -0.7em;
