@@ -231,7 +231,7 @@
     overflow: visible; /* For IE */
     padding: 0;
     border: none;
-    border-top: medium solid var(--tertiary);
+    border-top: solid var(--tertiary);
     color: var(--tertiary);
     text-align: center;
 }
