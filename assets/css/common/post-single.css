@@ -159,6 +159,10 @@ details li ul {
     -webkit-box-decoration-break: clone;
 }
 
+.w3-tag a {
+    text-decoration: none;
+}
+
 .post-content a code {
     margin: auto 0;
     border-radius: 0;
@@ -308,6 +312,9 @@ details li ul {
     border-top: thin solid var(--tertiary);
     color: var(--tertiary);
     text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .post-content > hr::after{
